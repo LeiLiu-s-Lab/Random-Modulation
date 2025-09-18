@@ -1,5 +1,7 @@
 ### Description
-This repository provides the MATLAB implementation of random modulation. Reference:
+This repository provides the MATLAB implementation of random modulation. 
+
+(*) Reference:
 
 [1] L Liu, Y. Chi, S. Huang, "Random Modulation: Achieving Asymptotic Replica Optimality over Arbitrary Norm-Bounded and Spectrally Convergent Channel Matrices," in Proc. IEEE Int. Symp. Inf. Theory (ISIT), Michigan, USA, 2025.
 
