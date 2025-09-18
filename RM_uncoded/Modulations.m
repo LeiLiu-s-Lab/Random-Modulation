@@ -10,6 +10,7 @@
 % (3a) type 'ADDM_j': info includes filed 'N_x', 'c_1', 'c_2'
 % (3b) type 'AFDM_p': info includes filed 'MN', 'N_s', 'c_1', 'c_2'
 % (4) type 'RM': info includes filed 'N_x', 'RM_type', 'index'
+% (5) type 'None': No modulations
 % ------------------------------------------------------------------
 % Difference: {(1a) and (1b)} or {(3a) and (3b)}
 % "_j" means joint modulation scheme:
@@ -89,6 +90,8 @@ function x = Modulations(s, info, is_inv)
     elseif strcmpi(type, 'RM')
         % see "Random_transform.m" for details
         x = Random_transform(s, info.rm_type, is_inv, info.index);
+    elseif strcmpi(type, 'None')
+        x = s;
     else 
         error('Modulation Error: "%s" is not supported currently!', type);
     end

@@ -9,6 +9,7 @@
 % 'fwht': fast Walsh–Hadamard transform (U = ifwht)
 % (3) is_inv: integer
 % 0 means Xi * x, 1 means Xi^H * x
+% (4) index: random permutation vector 
 % ------------------------------------------------------------------
 % Output:
 % res: RT/IRT vector
