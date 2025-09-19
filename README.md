@@ -18,3 +18,5 @@ In addition, we recommend consulting the following related works:
 (1) "RM_uncoded": Multipath MIMO channels with no code, RM (CD-MAMP) v.s. OFDM (LMMSE) v.s. OTFS and AFDM (CD-OAMP).
 
 (2) "RM_5GNR_LDPC": Currently being cleaned up and documented (coming soon).
+
+(3) "RM_power_allocation": Currently being cleaned up and documented (coming soon).
