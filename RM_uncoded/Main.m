@@ -147,7 +147,7 @@ end
 % r = x + w, w ~ CN(0, v), find its MAP BER 
 % For high SNR(dB), use the union bound (MAP_QAM function)
 BER_se = zeros(1, len);
-K = 3;
+K = 4;
 for k = 1 : K
     v = Var_se(k);
     N = 1e6;
@@ -162,7 +162,8 @@ for k = 1 : K
     BER_se(k) = sum(d_se~=d) / (2*N);
 end
 for k = K+1 : len
-    BER_se(k) = MAP_QAM(4, rho);    % QPSK: 4, 16QAM: 16
+    rho_k = 10^(SNR_dB(k)/10);
+    BER_se(k) = MAP_QAM(4, rho_k);    % QPSK: 4, 16QAM: 16
 end
 
 %% plot figures
@@ -176,4 +177,5 @@ semilogy(SNR_dB, BER_se, 'o', 'LineWidth', 1.5);
 ylim([8e-6, 0.2])
 legend('RM + MAMP', 'OFDM + OAMP', 'OTFS + OAMP', 'AFDM + OAMP', 'None + OAMP', 'SE');
 xlabel('SNR (dB)', 'FontSize', 11);
+
 ylabel('BER', 'FontSize', 11);
